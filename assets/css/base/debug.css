@@ -2,3 +2,8 @@
     border: 1px dotted green;
     box-sizing: border-box;
 }
+
+.menu > * {
+    border: 1px dotted blue;
+    box-sizing: border-box;
+}

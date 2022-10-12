@@ -1,0 +1,21 @@
+.title__div {
+    text-align: left;
+}
+
+.title__profile {
+    max-width: 9.8rem;
+    width: 100%;
+}
+
+.title__subsection {
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.title__network {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    font-weight: 700;
+}

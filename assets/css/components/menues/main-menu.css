@@ -1,0 +1,13 @@
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu__list {
+    display: none;
+}
+
+.menu__contact {
+    list-style: none;
+}

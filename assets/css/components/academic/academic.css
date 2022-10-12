@@ -1,0 +1,13 @@
+.academic__courses__list {
+    list-style: none;
+}
+
+.academic__courses__item__img {
+    background-color: var( --White );
+    margin: 1.6rem;
+}
+
+.academic__courses__list li:not( :first-child ) {
+    margin: .6rem 1.6rem;
+    text-align: left;
+}

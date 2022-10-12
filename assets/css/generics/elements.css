@@ -15,6 +15,7 @@ html {
 body {
     font-family: var( --Raleway );
     font-size: 1.4rem;
+    line-height: 1.614rem;
     text-align: center;
 }
 

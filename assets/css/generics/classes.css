@@ -3,6 +3,7 @@
     font-weight: 700;
     font-size: 2.2rem;
     line-height: 2.583rem;
+    margin: 3.2rem 0;
 }
 
 .section:nth-child( even ) {

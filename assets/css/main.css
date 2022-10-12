@@ -1,4 +1,6 @@
 @import './settings/variables.css';
 @import './generics/elements.css';
 @import './generics/classes.css';
+@import './components/components.css';
 @import './base/debug.css';
+@import './components/experience/experience.css';
