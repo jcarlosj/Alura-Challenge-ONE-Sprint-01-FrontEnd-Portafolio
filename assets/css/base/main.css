@@ -1,0 +1,15 @@
+html {   
+    max-width: 1400px; 
+    min-width: 320px;   
+}
+
+body {
+    font-family: var( --Raleway );
+}
+
+img,
+video,
+iframe {
+    block-size: auto;
+    max-inline-size: 100%;
+}
