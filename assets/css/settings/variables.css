@@ -11,4 +11,6 @@
     --White: #FFFFFF;
 
     --Raleway: 'Raleway';
+
+    --gutter-x: 1.6rem * 2;         /** Canal lateral en x (1.6rem) */
 }
