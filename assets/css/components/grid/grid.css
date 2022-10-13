@@ -1,16 +1,41 @@
+.section.skills,
+.hobbies__line {
+    --gap: 1rem;
+}
+
 .skills__line,
 .hobbies__line {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    display: flex;
     flex-wrap: wrap;
+    gap: var( --gap );
+    justify-content: space-between;
+    text-align: left;
 }
 
 .skills__box,
 .hobbies__box {
-    flex: 1 0 50%;
+    background: var( --White );   
+    flex: 1 0 calc( 50% - var( --gap ) );
+    padding: 3.8rem 1.6rem 1.6rem 1.6rem;
 }
+
 .skills__box ul,
 .hobbies__box ul {
     list-style: none;
+}
+
+.skills__name,
+.hobbies__name {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.878rem;
+    margin: 0.4rem 0 0 0;
+}
+
+.skills__box:last-of-type .skills__img img {
+    height: 3rem;
+}
+.hobbies__box:last-of-type .hobbies__img img {
+    height: 2.5rem;
 }
