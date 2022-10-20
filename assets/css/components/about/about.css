@@ -1,7 +1,35 @@
-.about__paragraph {
+.about__container {
+    margin: 0 auto;
+    padding: 3.2rem;
     text-align: left;
+}
+
+.about__paragraph {
+    line-height: 1.644rem;
+    padding-bottom: 1.6rem;
 }
 
 .about__signature {
     display: block;
+}
+
+@media ( min-width: 576px ) {
+    .about__container {
+        margin: 0 auto;
+    }
+}
+
+@media( min-width: 992px ) {
+    .about__title {
+        font-size: 3.2rem;
+        line-height: 3.757rem;
+    }
+    .about__paragraph {
+        font-size: 1.6rem;
+        line-height: 1.878rem;
+    }
+    .about__title,
+    .about__paragraph {
+        width: 71%;
+    }
 }

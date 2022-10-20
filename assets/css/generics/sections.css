@@ -14,3 +14,8 @@
 .section:nth-child( 7 ) {
     background-color: var( --Platinum );
 }
+
+.section:nth-child( 3 ),
+.section:nth-child( 6 ) {
+    background-color: var( --AliceBlue );
+}
