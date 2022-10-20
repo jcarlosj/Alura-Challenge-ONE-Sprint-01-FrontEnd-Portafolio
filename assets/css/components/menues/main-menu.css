@@ -17,6 +17,13 @@
     line-height: 1.878rem;
 }
 
+.menu__nav {
+    align-items: center;
+    display: flex;
+    gap: 3rem;
+    justify-content: space-around;
+}
+
 .menu__list {
     display: none;
 }
@@ -28,5 +35,16 @@
 @media ( min-width: 576px ) {
     .menu__list__item__contato a {
         font-weight: 700;
+    }
+}
+
+@media ( min-width: 992px ) {
+    .menu__list {
+        display: flex;
+        gap: 3rem;
+        list-style: none;
+    }
+    .menu__list__item:last-child {
+        display: none;
     }
 }

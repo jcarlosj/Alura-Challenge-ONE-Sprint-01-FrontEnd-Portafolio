@@ -3,7 +3,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 1.6rem auto;
+    margin: 0 auto;
+    padding: 3.2rem;
     text-align: left;
 }
 
@@ -66,8 +67,9 @@
         line-height: 2.583rem;
     }
     .title__network {
-        justify-content: flex-start;
         gap: 6rem;
+        justify-content: flex-start;
+        margin-top: 2.2rem;
     }
     .title__network__item a {
         line-height: 1.878rem;
