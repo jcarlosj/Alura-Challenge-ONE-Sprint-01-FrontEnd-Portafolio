@@ -1,12 +1,12 @@
+.section.skills,
+.section.hobbies {
+    --gap: 1rem;
+}
+
 .skills__container,
 .hobbies__container {
     /* margin: 0 auto; */
     padding: 3.2rem;
-}
-
-.section.skills,
-.hobbies__line {
-    --gap: 1rem;
 }
 
 .skills__line,
