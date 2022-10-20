@@ -2,6 +2,10 @@
     --gap: 1rem;
 }
 
+.academic__container {
+    padding: 3.2rem;
+}
+
 .academic__courses {
     display: flex;
     flex-direction: column;
@@ -43,6 +47,10 @@
     .academic__logo {
         padding: 3.8rem 0;
         width: 54%;
+    }
+    .academic__title {
+        font-size: 3.2rem;
+        line-height: 3.757rem;
     }
 }
 

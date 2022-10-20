@@ -1,37 +1,95 @@
-.experience__img {
-    --margin: 1.6rem; 
-    margin: var( --margin );
-    width: calc( 100% - ( var( --margin ) * 2 ) );
+.experience__container {
+    --gap: 1rem;
+    padding: 3.2rem;
+}
+
+.experience__box {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.experience__description {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var( --gap );
+}
+
+.experiencia__botao--repo,
+.experience__botao--demo {
+    border: 2px solid var( --BleuDeFrance );
+    display: inline-block;
+    padding: 1.2rem 1.6rem;
 }
 
 .experiencia__botao--repo {
-    border: 2px solid var( --BleuDeFrance );
-    padding: 1.2rem 1.6rem;
     color: var( --BleuDeFrance );
 }
 
 .experience__botao--demo {
-    border: 2px solid var( --BleuDeFrance );
-    padding: 1.2rem 1.6rem;
     background-color: var( --BleuDeFrance );
     color: var( --White );
 }
 
 .experience__info {
-    margin: .6rem 1.6rem;
     text-align: left;
-}
-
-.experience__info {
     font-size: 1.6rem;
     font-weight: 700;
+    margin: 2rem 0 3.4rem 0;
+}
+.experience__info .experience__text {
     line-height: 1.878rem;
 }
-
-.experience__text {
-    margin: 1rem 0;
-    font-weight: 500;
-    font-size: 1.4rem;
+.experience__info .experience__description {
     line-height: 1.644rem;
 }
 
+.experience__text {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.644rem;
+    margin: 1rem 0;
+}
+
+@media ( min-width: 992px ) {
+    .experience__box {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .experience__title {
+        font-size: 3.2rem;
+        line-height: 3.757rem;
+    }
+    .experience__img {
+        width: 65%;
+    }
+    .experience__box {
+        align-items: center;
+        display: flex;
+        justify-content: stretch;
+        margin: 4rem 0;
+    }
+    .experience__box:nth-child( even ) {
+        flex-direction: row;
+    }
+    .experience__box:nth-child( even ) .experience__info {
+        padding-left: 2rem;
+    }
+    .experience__box:nth-child( odd ) {
+        flex-direction: row-reverse;
+    }
+    .experience__info {
+        font-size: 2.2rem;
+        line-height: 2.583rem;
+        width: 100%;
+    }
+    .experience__info .experience__text,
+    .experience__info .experiencia__botao--repo,
+    .experience__info .experience__botao--demo {
+        font-size: 1.6rem;
+        line-height: 1.878rem;
+    }
+}
