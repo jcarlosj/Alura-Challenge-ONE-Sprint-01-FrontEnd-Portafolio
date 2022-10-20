@@ -33,7 +33,7 @@
         max-width: 960px;
     }
 }
-@media (min-width: 1200px) {
+@media ( min-width: 1200px ) {
     .container-xl, 
     .container-lg, 
     .container-md, 

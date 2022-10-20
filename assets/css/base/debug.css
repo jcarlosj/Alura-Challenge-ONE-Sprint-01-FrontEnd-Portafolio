@@ -3,7 +3,8 @@
     box-sizing: border-box;
 }
 
-.section > * {
+.section > .skills__container > *,
+.section > .hobbies__container > * {
     border: 1px dotted blue;
     box-sizing: border-box;
 }
