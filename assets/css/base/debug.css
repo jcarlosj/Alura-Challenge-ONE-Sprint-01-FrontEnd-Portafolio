@@ -3,7 +3,7 @@
     box-sizing: border-box;
 }
 
-.menu > * {
+.section > * {
     border: 1px dotted blue;
     box-sizing: border-box;
 }
