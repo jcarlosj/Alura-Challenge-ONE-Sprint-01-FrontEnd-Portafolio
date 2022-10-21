@@ -40,8 +40,8 @@
     width: 100%;
 }
 
-.formcontato__form > input,
-.formcontato__form > textarea {
+input,
+textarea {
     color: var( --OuterSpace );
     font-size: 1.6rem;
     font-style: normal;
@@ -50,7 +50,8 @@
     outline: none;
     padding: 1.6rem 1rem;
 }
-.formcontato__form > *::placeholder {
+input::placeholder,
+textarea::placeholder {
     color: var( --QuickSilver );
 }
 
