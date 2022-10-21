@@ -16,6 +16,7 @@
 }
 
 .section:nth-child( 3 ),
-.section:nth-child( 6 ) {
+.section:nth-child( 6 ),
+.section:nth-child( 8 ) {
     background-color: var( --AliceBlue );
 }
