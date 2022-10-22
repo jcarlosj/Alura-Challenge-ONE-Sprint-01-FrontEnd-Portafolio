@@ -273,20 +273,20 @@
                     <h3 class="formcontato__subtext">¿Quieres contactarme?</h3>
                     <h3 class="formcontato__subtext">Complete el siguiente formulario y me pondré en contacto con usted lo antes posible. </h3>
                     <form class="formcontato__form" name="form">
-                        <div class="form-field">
+                        <div class="form-field form-field-input">
                             <input type="text" name="name" class="form-control" id="name" placeholder="Escribe tú nombre" data-type="input-name" required />
                             <label for="name" class="form-label" data-type="label-name">Nombre:</label>
                         </div>
-                        <div class="form-field">
+                        <div class="form-field form-field-input">
                             <input type="email" name="email" class="form-control" id="email" placeholder="Escribe un e-mail" data-type="input-email" required />
                             <label for="email" class="form-label" data-type="label-email">E-mail:</label>
                         </div>
-                        <div class="form-field">
+                        <div class="form-field form-field-input">
                             <input type="text" name="assunto" class="form-control" id="assunto" placeholder="Escribe un assunto" data-type="input-assunto" required />
                             <label for="assunto" class="form-label" data-type="label-assunto">Assunto:</label>
                         </div>
-                        <div class="form-field">
-                            <textarea name="mensagem" class="form-control" class="form-control" id="mensagem" placeholder="Escribe un mensagem" data-type="textarea-mensagem" required></textarea>
+                        <div class="form-field form-field-textarea">
+                            <textarea name="mensagem" class="form-control" id="mensagem" minlength="25" placeholder="Escribe un mensagem" data-type="textarea-mensagem" required></textarea>
                             <label for="mensagem" class="form-label" data-type="label-mensagem">Mensaje:</label>
                         </div>
                         <button type="submit" class="formcontato__botao">Enviar mensaje</button>
