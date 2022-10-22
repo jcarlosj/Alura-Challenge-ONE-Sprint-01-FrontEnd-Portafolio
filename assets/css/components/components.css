@@ -3,5 +3,6 @@
 @import './about/about.css';
 @import './grid/grid.css';
 @import './academic/academic.css';
-@import './contact/formcontacto.css';
+@import './form/form-contacto.css';
+@import './form/input/input.css';
 @import './footer/footer.css';
