@@ -1,3 +1,6 @@
+import { showErrorMessage } from './errors.js';
+
+
 // Define los tipos de campo que se van a validar y su funcion evaludadora
 const fieldValidators = {
     "input-name": ( input ) => validateInputName( input )
@@ -19,10 +22,14 @@ export function validateDataSet( input ) {
     if( input.validity.valid ) {
         input.classList.remove( 'invalid' );
         changeLabel( input );
+
+        input.parentElement.querySelector( '.form-message' ).innerHTML = '';
     }
     else {
         input.classList.add( 'invalid' );
         changeLabel( input );
+
+        input.parentElement.querySelector( '.form-message' ).innerHTML = showErrorMessage( typeInput, input );
     }
 }
 
