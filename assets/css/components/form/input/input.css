@@ -93,6 +93,18 @@ input:focus::placeholder {
     opacity: 1;
 }
 
+.form-message {
+    color: gray;
+    display: flex;
+    font-size: 1.2rem;
+    left: 0;
+    line-height: 1.644rem;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    top: var( --input-height );     /** Altura del campo */
+    width: 100%;
+}
+
 
 /* Elemento: textarea */
 .form-field-textarea {
@@ -150,4 +162,16 @@ textarea::placeholder {
 }
 textarea:focus::placeholder {
     opacity: 1;
+}
+
+.form-field-textarea .form-message {
+    color: gray;
+    display: flex;
+    font-size: 1.2rem;
+    left: 0;
+    line-height: 1.644rem;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    top: calc( var( --input-height ) * 2.2 );     /** Altura del campo */
+    width: 100%;
 }

@@ -12,3 +12,7 @@
     border: 1px dotted blue;
     box-sizing: border-box;
 }
+
+.form-message {
+    border: 1px dotted red;
+}
