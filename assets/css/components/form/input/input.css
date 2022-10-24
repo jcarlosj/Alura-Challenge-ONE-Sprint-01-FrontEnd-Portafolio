@@ -47,6 +47,17 @@ input {
 input:invalid {
     border-bottom: 1px solid var( --ChineseSilver );
 }
+input.invalid:invalid {
+    border-bottom: 3px solid var( --FerrariRed );
+    padding: 1rem 1rem 0 1rem;
+    transition: 0.5s all;
+}
+input.invalid:invalid~label {
+    font-size: 1.2rem;
+    top: -20px;
+    color: var( --FerrariRed );
+    padding: 3.3rem 1rem;
+}
 
 input:focus {
     border-bottom: 3px solid var( --BleuDeFrance );
