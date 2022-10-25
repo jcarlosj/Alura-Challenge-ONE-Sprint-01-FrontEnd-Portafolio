@@ -1,0 +1,28 @@
+/* Elemento que envuelve un campo del formulario y su etiqueta (label) */
+.form-field {
+    position: relative;
+    width: 100%;
+    height: var( --input-height );
+    line-height: 44px;
+}
+
+/* Elemento: label */
+label {
+    align-items: center;
+    color: #d3d3d3;
+    cursor: text;
+    display: flex;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    height: var( --input-height );
+    justify-content: left;
+    left: 0;
+    line-height: 2rem;
+    outline: none;
+    padding: 0 1rem;
+    position: absolute;
+    top: 0;
+    transition: 0.5s all;
+    width: 100%;
+}
