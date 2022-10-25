@@ -94,7 +94,7 @@ input:focus::placeholder {
 }
 
 .form-message {
-    color: gray;
+    color: var( --FerrariRed );
     display: none;
     font-size: 1.2rem;
     left: 0;
@@ -135,6 +135,17 @@ textarea {
 textarea:invalid {
     border-bottom: 1px solid var( --ChineseSilver );
 }
+textarea.invalid:invalid {
+    border-bottom: 3px solid var( --FerrariRed );
+    transition: 0.5s all;
+}
+textarea.invalid:invalid~label {
+    font-size: 1.2rem;
+    top: -20px;
+    color: var( --FerrariRed );
+    padding: 3.3rem 1rem;
+}
+
 
 textarea:focus {
     border-bottom: 3px solid var( --BleuDeFrance );
@@ -169,8 +180,7 @@ textarea:focus::placeholder {
 }
 
 .form-field-textarea .form-message {
-    color: gray;
-    display: flex;
+    display: none;
     font-size: 1.2rem;
     left: 0;
     line-height: 1.644rem;
@@ -178,4 +188,8 @@ textarea:focus::placeholder {
     position: absolute;
     top: calc( var( --input-height ) * 2.2 );     /** Altura del campo */
     width: 100%;
+}
+
+.form-field-textarea .form-message.invalid {
+    display: flex;
 }

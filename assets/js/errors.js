@@ -1,4 +1,4 @@
-import { changeInput, changeLabel } from './helpers.js';
+import { displayError } from './helpers.js';
 
 
 const typeErrors = [ 'valueMissing', 'typeMismatch', 'patternMismatch', 'customError' ];
@@ -9,7 +9,6 @@ const errorMessages = {
         typeMismatch: 'El correo no es válido'
     }
 }
-
 
 function getErrorMessage( typeInput, input ) {
     let message = '';
@@ -35,25 +34,26 @@ function getErrorMessage( typeInput, input ) {
 }
 
 export function showError( typeInput, input ) {
-    const els = input.parentElement.children;
+    const message = getErrorMessage( typeInput, input );
 
-    for( let el of els ) {
+    console.log( getErrorMessage( typeInput, input ) );
+    displayError( input, message );
 
-        if( el.nodeName == 'SPAN' ) {
-            console.log( el );
 
-            // Verifica si el campo pasó la validación
-            if( input.validity.valid ) {
-                el.classList.remove( 'invalid' );
-                el.parentElement.querySelector( '.form-message' ).innerHTML = '';
-            }
-            else {  // o no
-                el.classList.add( 'invalid' );
-                el.parentElement.querySelector( '.form-message' ).innerHTML = getErrorMessage( typeInput, input );
-            }
-        }
-    }
+    // const els = input.parentElement.children;
 
-    changeInput( input );
-    changelabel( input );
+    // for( let el of els ) {
+
+    //     if( el.nodeName == 'SPAN' ) {
+    //         console.log( el );
+
+    //         // Verifica si el campo pasó la validación
+    //         if( input.validity.valid ) {
+    //             el.parentElement.querySelector( '.form-message' ).innerHTML = '';
+    //         }
+    //         else {  // o no
+    //             el.parentElement.querySelector( '.form-message' ).innerHTML = getErrorMessage( typeInput, input );
+    //         }
+    //     }
+    // }
 }

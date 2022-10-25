@@ -1,24 +1,34 @@
-export function changeInput( input ) {
+function changeFieldState( currentField ) {
     // Verifica si el campo pasó la validación 
-    if( input.validity.valid )
-        input.classList.remove( 'invalid' );        
+    if( currentField.validity.valid )
+        currentField.classList.remove( 'invalid' );        
     else    // o no
-        input.classList.add( 'invalid' );
+        currentField.classList.add( 'invalid' );
 }
 
-export function changeLabel( input ) {
-    const els = input.parentElement.children;
+export function changeState( currentField ) {
+    const siblings = currentField.parentElement.children;
 
-    for( let el of els ) {
-        if( el.nodeName == 'LABEL' ) {
-            console.log( el );
+    console.log( siblings );
+    
+    changeFieldState( currentField );
 
-            // Verifica si el campo pasó la validación
-            if( input.validity.valid )
+    for( let el of siblings ) {
+        // Verifica si el campo pasó la validación
+        if( currentField.validity.valid ) {  
+
+            if( el.nodeName == 'LABEL' )
                 el.classList.remove( 'invalid' );
-            else    // o no
+
+            if( el.nodeName == 'SPAN' )
+                el.classList.remove( 'invalid' );
+        }
+        else {      // o no
+            if( el.nodeName == 'LABEL' )
                 el.classList.add( 'invalid' );
 
+            if( el.nodeName == 'SPAN' )
+                el.classList.add( 'invalid' );
         }
     }
 }
@@ -28,7 +38,6 @@ export function displayError( input, message ) {
 
     for( let el of els ) {
         if( el.nodeName == 'SPAN' ) {
-            console.log( el );
 
             // Verifica si el campo pasó la validación
             if( input.validity.valid ) {

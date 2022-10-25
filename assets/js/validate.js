@@ -1,12 +1,12 @@
 import { showError } from './errors.js';
-import { changeInput, changeLabel, displayError } from './helpers.js';
+import { displayError, changeState } from './helpers.js';
 
 
 // Define los tipos de campo que se van a validar y su funcion evaludadora
 const fieldValidators = {
     "input-name": ( input ) => validateMaximumCharacters( input, 5 ),
     "input-assunto": ( input ) => validateMaximumCharacters( input, 50 ),
-    "textarea-mensagem": ( input ) => validateMaximumCharacters( input, 300 ),
+    "textarea-mensagem": ( input ) => validateMaximumCharacters( input, 5 ),
 }
 
 export function validateDataSet( input ) {
@@ -19,9 +19,7 @@ export function validateDataSet( input ) {
     if( fieldValidators[ typeInput ] )
         fieldValidators[ typeInput ] ( input );     // Ejecuta la validacion sobre el campo definido
     else {
-        // console.log( input.parentElement.children );
-        changeInput( input );
-        changeLabel( input );
+        changeState( input );
         showError( typeInput, input );
     }
 }
@@ -41,5 +39,6 @@ function validateMaximumCharacters( input, maximumCharacters = 25 ) {
     // input.reportValidity();                     // Despliega mensaje de error en el tooltip por defecto del campo
     console.log( input.validationMessage );     // Muestra solo en mensaje de error actual
 
+    changeState( input );
     displayError( input, message );
 }
