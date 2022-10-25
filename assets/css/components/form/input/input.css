@@ -95,7 +95,7 @@ input:focus::placeholder {
 
 .form-message {
     color: gray;
-    display: flex;
+    display: none;
     font-size: 1.2rem;
     left: 0;
     line-height: 1.644rem;
@@ -103,6 +103,10 @@ input:focus::placeholder {
     position: absolute;
     top: var( --input-height );     /** Altura del campo */
     width: 100%;
+}
+
+.form-message.invalid {
+    display: flex;
 }
 
 

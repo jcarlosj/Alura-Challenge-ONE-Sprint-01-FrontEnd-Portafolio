@@ -1,3 +1,6 @@
+import { changeInput, changeLabel } from './helpers.js';
+
+
 const typeErrors = [ 'valueMissing', 'typeMismatch', 'patternMismatch', 'customError' ];
 
 const errorMessages = {
@@ -8,7 +11,7 @@ const errorMessages = {
 }
 
 
-export function showErrorMessage( typeInput, input ) {
+function getErrorMessage( typeInput, input ) {
     let message = '';
 
     console.group( `type: ${ typeInput }` );
@@ -16,15 +19,41 @@ export function showErrorMessage( typeInput, input ) {
     /** Itera todos los tipos de errores que hemos considerado */
     typeErrors.forEach( typeError => {
         // console.log( `${ typeError }: ${ input.validity[ typeError ] }` );                                              // Mostrará todos los tipos de errores y sus errores
-        console.log( `${ input.validity[ typeError ] ? `${ typeError }: ${ input.validity[ typeError ] }` : '' }` );    // Mostrará solo los tipos de errores que contiene el elemento
 
         // Verifica si existe este tipo de error en el elemento input
-        if( input.validity[ typeError ] )
-            message = errorMessages[ typeInput ][ typeError ];
+        if( input.validity[ typeError ] ) {
+            console.log( `${ input.validity[ typeError ] ? `${ typeError } : ${ input.validity[ typeError ] }` : '' }` );    // Mostrará solo los tipos de errores que contiene el elemento
+            
+            message = errorMessages[ typeInput ][ typeError ];      // Asigna el mensaje de error
+        }
 
     });
 
     console.groupEnd();
 
     return message;
+}
+
+export function showError( typeInput, input ) {
+    const els = input.parentElement.children;
+
+    for( let el of els ) {
+
+        if( el.nodeName == 'SPAN' ) {
+            console.log( el );
+
+            // Verifica si el campo pasó la validación
+            if( input.validity.valid ) {
+                el.classList.remove( 'invalid' );
+                el.parentElement.querySelector( '.form-message' ).innerHTML = '';
+            }
+            else {  // o no
+                el.classList.add( 'invalid' );
+                el.parentElement.querySelector( '.form-message' ).innerHTML = getErrorMessage( typeInput, input );
+            }
+        }
+    }
+
+    changeInput( input );
+    changelabel( input );
 }
