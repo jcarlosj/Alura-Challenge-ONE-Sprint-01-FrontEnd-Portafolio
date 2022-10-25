@@ -4,9 +4,9 @@ import { displayError, changeState } from './helpers.js';
 
 // Define los tipos de campo que se van a validar y su funcion evaludadora
 const fieldValidators = {
-    "input-name": ( input ) => validateMaximumCharacters( input, 5 ),
+    "input-name": ( input ) => validateMaximumCharacters( input, 50 ),
     "input-assunto": ( input ) => validateMaximumCharacters( input, 50 ),
-    "textarea-mensagem": ( input ) => validateMaximumCharacters( input, 5 ),
+    "textarea-mensagem": ( input ) => validateMaximumCharacters( input, 300 ),
 }
 
 export function validateDataSet( input ) {
