@@ -32,6 +32,12 @@
     text-align: left;
 }
 
+/* Contenedor del formulario */
+.formcontato__text {
+    border: 1px dotted transparent;
+    box-sizing: border-box;
+}
+
 @media ( min-width: 992px ) {
     .formcontato__container {
         align-items: stretch;
