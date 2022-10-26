@@ -1,5 +1,5 @@
 import { showError } from './errors.js';
-import { displayError, changeState } from './helpers.js';
+import { displayError, changeState, changeStateElement } from './helpers.js';
 
 
 // Define los tipos de campo que se van a validar y su funcion evaludadora
@@ -9,8 +9,10 @@ const fieldValidators = {
     "textarea-mensagem": ( input ) => validateMaximumCharacters( input, 300 ),
 }
 
-export function validateDataSet( input ) {
+export function validateDataSet( input, fields ) {
+    const $btnForm = document.querySelector( '.formcontato__botao' );
     const typeInput = input.dataset.type;
+    let enabledButton = [];
 
     console.log( typeInput );
     console.log( input.validity );
@@ -22,6 +24,14 @@ export function validateDataSet( input ) {
         changeState( input );
         showError( typeInput, input );
     }
+
+    fields.forEach( field => {
+        // console.log( field.validity.valid );
+        enabledButton.push( field.validity.valid );
+    });
+
+    changeStateElement( $btnForm, enabledButton );
+
 }
 
 function validateMaximumCharacters( input, maximumCharacters = 25 ) {
@@ -37,7 +47,7 @@ function validateMaximumCharacters( input, maximumCharacters = 25 ) {
     
     input.setCustomValidity( message );         // setCustomValidity: define el mensaje de validación personalizado para el elemento seleccionado con el mensaje especifico
     // input.reportValidity();                     // Despliega mensaje de error en el tooltip por defecto del campo
-    console.log( input.validationMessage );     // Muestra solo en mensaje de error actual
+    // console.log( input.validationMessage );     // Muestra solo en mensaje de error actual
 
     changeState( input );
     displayError( input, message );

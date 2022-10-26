@@ -9,7 +9,7 @@ function changeFieldState( currentField ) {
 export function changeState( currentField ) {
     const siblings = currentField.parentElement.children;
 
-    console.log( siblings );
+    // console.log( siblings );
     
     changeFieldState( currentField );
 
@@ -50,4 +50,15 @@ export function displayError( input, message ) {
             el.parentElement.querySelector( '.form-message' ).innerHTML = message;
         }
     }
+}
+
+export function changeStateElement( element, enabled ) {
+    const isEnabled = enabled.every( value => value === true );
+
+    // console.log( element, isEnabled, enabled );
+
+    if( isEnabled )
+        element.removeAttribute( 'disabled' );
+    else
+        element.setAttribute( 'disabled', '' );
 }
