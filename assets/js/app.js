@@ -1,7 +1,9 @@
 import { validateDataSet } from './validate.js';
 
 
-const $fields = document.querySelectorAll( '.form-control' );
+const 
+    $fields = document.querySelectorAll( '.form-control' ),
+    $anio = document.querySelector( '.anio' );
 
 const validate = ( event, enabledButton ) => validateDataSet( event.target, enabledButton );
 
@@ -16,3 +18,5 @@ $fields.forEach( field => {
         validate( event, $fields );
     } );
 });
+
+$anio.innerHTML = new Date().getFullYear();
